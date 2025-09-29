@@ -1,0 +1,21 @@
+.header {
+
+    background-color: aquamarine;
+    padding: 1rem;
+    font-family: system-ui;
+
+    /* .header__title {} */
+    &__title {
+        color: white;
+    }
+
+}
+
+.custom-button {
+    background-color: aquamarine;
+    color: black;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}

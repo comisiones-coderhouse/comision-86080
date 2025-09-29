@@ -1,0 +1,43 @@
+Manuales de React (desde el mas tecnico al mas amigable)
+
+https://react.dev/
+https://www.reactjs.wiki/
+https://react.gg/visualized#the-react-way
+https://drive.google.com/file/d/1fnPPtxSHewaYpRmlaa49cAtG2B13lZu8/view
+https://github.com/r5n-labs/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md
+https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+https://svgl.app/
+https://react-bootstrap.netlify.app/docs/getting-started/introduction
+https://ant.design/docs/react/use-with-vite
+https://tailwindcss.com/docs/display
+https://cssinjs.org/?v=v10.10.1
+
+rfc
+
+export default function Footer() {
+  return (
+    <div>Footer</div>
+  )
+}
+
+
+rfce
+
+function Footer() {
+  return (
+    <div>Footer</div>
+  )
+}
+
+export default Footer
+
+
+- props
+
+
+
+//Declaracion
+function foo(saludo){}
+
+//Ejecucion
+foo("Hola")
