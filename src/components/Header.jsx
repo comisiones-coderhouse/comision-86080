@@ -4,7 +4,7 @@ function Header() {
     return (
         <header class="header">
             <h1 class="header__title">Customicart</h1>
-            <Nav />
+            <Nav hasButtons={true}/>
         </header>
     )
 }

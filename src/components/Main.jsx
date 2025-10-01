@@ -1,10 +1,12 @@
 /* import miImagen from "../fondo.jpg" */
 
+import Counter from "./Counter"
+
 
 
 function Main() {
     return (
-        <main>
+        <main className="main">
             <div>
                 {/* <img src={miImagen} alt="" /> */}
                 {/* <img src="/fondo.jpg" alt="" /> */}
@@ -13,6 +15,7 @@ function Main() {
             </div>
             <h2>Soy Main</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, id maxime impedit repellendus similique, distinctio tempora ut dolor necessitatibus voluptatibus cum aperiam veritatis, quo porro quibusdam! Soluta repellat minus necessitatibus.</p>
+            <Counter />
         </main>
     )
 }

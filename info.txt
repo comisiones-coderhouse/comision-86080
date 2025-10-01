@@ -11,6 +11,9 @@ https://react-bootstrap.netlify.app/docs/getting-started/introduction
 https://ant.design/docs/react/use-with-vite
 https://tailwindcss.com/docs/display
 https://cssinjs.org/?v=v10.10.1
+https://danielkummer.github.io/git-flow-cheatsheet/
+
+
 
 rfc
 
@@ -37,7 +40,15 @@ export default Footer
 
 
 //Declaracion
-function foo(saludo){}
+function Foo(saludo){}
 
 //Ejecucion
-foo("Hola")
+Foo("Hola")
+
+<Foo unProp="unvalor" />
+
+
+
+Hooks y estados
+
+Todos los hooks son funciones que comienzan con la palabra "use" (useState,useEffect,useContext,useLoQueSea)
