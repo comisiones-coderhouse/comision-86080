@@ -12,7 +12,7 @@ https://ant.design/docs/react/use-with-vite
 https://tailwindcss.com/docs/display
 https://cssinjs.org/?v=v10.10.1
 https://danielkummer.github.io/git-flow-cheatsheet/
-
+https://lucide.dev/guide/installation
 
 
 rfc
@@ -52,3 +52,84 @@ Foo("Hola")
 Hooks y estados
 
 Todos los hooks son funciones que comienzan con la palabra "use" (useState,useEffect,useContext,useLoQueSea)
+
+
+
+1ra preentrega : 
+
+- App 
+- NavBar : Aca va el brand y los links de navegacion (categorias de productos) - Va dentro de App
+- CartWidget : Aca va el icono del carrito de compras con un numero - Va dentro de Navbar
+- ItemListContainer : Aca se recibe un prop llamado "greeting" y se muestra en el container - Va dentro de App
+
+
+
+
+Syntaxis de estados : 
+
+const [miEstado,setMiEstado] = useState(<valorInicial>);
+
+
+
+Destructuring :
+
+
+const nombres = [ "horacio" , "marta" , "nico" , "fer" ]
+
+const primero = nombres[0]; //"horacio"
+const segundo = nombres[1]; //"marta"
+const tercero = nombres[2]; //"nico"
+const cuarto = nombres[3]; //"fer"
+
+
+const [const1,const2,...constN] = unArray
+
+const [primero,segundo,tercero,cuarto] = nombres
+
+
+console.log(segundo) //"marta"
+console.log(primero) //"horacio"
+console.log(cuarto) //"fer"
+console.log(tercero) //"nico"
+console.log(cuarto) //"fer"
+console.log(segundo) //"marta"
+
+
+
+
+
+
+const persona = {
+  nombre : "Horacio",
+  edad : 35, 
+  isDev : true
+}
+
+const nombre = persona.nombre;
+const edad = persona.edad;
+const isDev = persona.isDev;
+
+
+const {prop1:var1,prop2:var2,...propN:varN} = unObj
+const {nombre:nombre,edad:edad,isDev:isDev} = persona
+const {edad,isDev,nombre} = persona
+
+console.log(nombre)
+console.log(nombre)
+console.log(edad)
+console.log(isDev)
+
+
+
+
+Object Property Shorthand
+
+const nombre = "Horacio";
+const edad = 35;
+
+const persona = {
+  nombre, //nombre : nombre,
+  edad : edad
+};
+
+

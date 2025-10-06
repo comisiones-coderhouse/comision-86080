@@ -3,12 +3,11 @@ import { useState } from "react";
 function Counter() {
 
     //Estados
-    //let contador = 0;
+    const stock = 3;
+    const [contador, setContador] = useState(2)
+    const showError = contador > stock;
 
-    //const [a,setA] = useState(valorInicial)
-    const [contador, setContador] = useState(0)
-
-
+    
     //Acciones
     function handleSumar() {
         //contador = contador + 1;
@@ -24,13 +23,24 @@ function Counter() {
 
 
     //Vista
-    return (
-        <div>
-            <button onClick={handleSumar}>+</button>
-            <p>El contador va : {contador}</p>
-            <button onClick={handleRestar}>-</button>
-        </div>
-    )
+    if (!showError) {
+        return (
+            <div>
+                <button onClick={handleSumar} /* disabled={disabled} */>+</button>
+                <p>El contador va : {contador}</p>
+                <button onClick={handleRestar}>-</button>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <button onClick={handleSumar} /* disabled={disabled} */>+</button>
+                <p>El contador va : {contador}</p>
+                <button onClick={handleRestar}>-</button>
+                <p className="error-message">Te pasaste del stock disponible, solo hay {stock}!</p>
+            </div>
+        )
+    }
 }
 
 export default Counter

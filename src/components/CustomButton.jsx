@@ -14,16 +14,17 @@ btn.addEventListener("click",function(){})
 
 
 
-function CustomButton(props) {
+function CustomButton({ customClass, texto, leadingIcon, children, isAllowed }) {
+    //const { isAllowed, customClass, texto, leadingIcon, children } = props
 
     //Acciones
-    function handleClick(){
+    function handleClick() {
         console.log("Hola soy un click")
     }
 
 
     //Vista
-    if (props.isAllowed) {
+    if (isAllowed) {
 
         return (
             <button onClick={handleClick}>Bienvenido</button>
@@ -38,17 +39,17 @@ function CustomButton(props) {
     }
 
     /* 
-        const finalClass = "custom-button " + props.customClass
+        const finalClass = "custom-button " + customClass
     
         return (
             <button className={finalClass}>
-                {props.texto} {props.leadingIcon}
+                {texto} {leadingIcon}
             </button>
         ) */
 
     /* return (
         <button>
-            {props.children}
+            {children}
         </button>
     ) */
 }

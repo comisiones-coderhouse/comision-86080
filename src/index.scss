@@ -4,6 +4,7 @@ $primary: #469381;
 $secondary: #9ccec2;
 $accent: #75c6b2;
 $p-base : 1rem;
+$destructive : rgb(170, 24, 24);
 
 * {
     margin: 0;
@@ -57,3 +58,22 @@ a {
 .custom-button.danger {}
 
 .custom-button.primary {}
+
+.error-message {
+    color: $destructive;
+}
+
+.popup {
+    position: fixed;
+    inset : 0;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup__container {
+    background-color: $background;
+    padding: $p-base;
+}
