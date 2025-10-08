@@ -1,6 +1,4 @@
-import Popup from "./Popup"
-
-
+import Form from "./FormConRef"
 
 function Main() {
     return (
@@ -8,7 +6,9 @@ function Main() {
             <h2>Soy Main</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, id maxime impedit repellendus similique, distinctio tempora ut dolor necessitatibus voluptatibus cum aperiam veritatis, quo porro quibusdam! Soluta repellat minus necessitatibus.</p>
             {/* <Counter /> */}
-            <Popup />
+            {/* <Popup /> */}
+            {/* <Form /> */}
+            <Form />
         </main>
     )
 }

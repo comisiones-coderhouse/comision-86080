@@ -120,8 +120,6 @@ console.log(edad)
 console.log(isDev)
 
 
-
-
 Object Property Shorthand
 
 const nombre = "Horacio";
@@ -133,3 +131,18 @@ const persona = {
 };
 
 
+- Formulario
+- useRef
+- useEffect
+
+
+
+for / while
+
+Array.forEach((item,indice)=>{
+  
+})
+
+Array.map((item,indice)=>{
+  return ????
+})

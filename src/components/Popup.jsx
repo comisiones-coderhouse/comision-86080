@@ -4,20 +4,8 @@ import { useState } from "react"
 
 function Popup() {
 
-    //Estados
-    //const [var1,var2,...varN] = unArray
-    /* console.log(useState(1))
-    console.log(useState("Hola"))
-    console.log(useState(true))
-    console.log(useState()) */
     const [isOpen, setIsOpen] = useState(false)
 
-    /* const miArray = useState(false)
-    const isOpen = miArray[0];
-    const setIsOpen = miArray[1]; */
-
-
-    //Accion
     function handleOpenPopup() {
         setIsOpen(true)
     }
@@ -27,7 +15,6 @@ function Popup() {
     }
 
 
-    //Vista
     if (isOpen) {
         return (
             <>
