@@ -1,4 +1,4 @@
-import Form from "./FormConRef"
+import ProductosContainer from "./ProductosContainer"
 
 function Main() {
     return (
@@ -8,7 +8,9 @@ function Main() {
             {/* <Counter /> */}
             {/* <Popup /> */}
             {/* <Form /> */}
-            <Form />
+            {/* <Form /> */}
+            {/* <UserList /> */}
+            <ProductosContainer />
         </main>
     )
 }

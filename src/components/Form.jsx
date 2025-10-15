@@ -37,12 +37,19 @@ function Form() {
     }
 
     return (
-        <form>
-            <Input type="text" placeholder="Ej : Horacio" onChange={handleInputChange} id="test" prefix={<User color="rgba(0,0,0,0.5)" />} />
-            <Button onClick={handleSaveClick}>
-                guardar
-            </Button>
-        </form>
+        <div>
+            <form>
+                <Input type="text" placeholder="Ej : Horacio" onChange={handleInputChange} id="test" prefix={<User color="rgba(0,0,0,0.5)" />} />
+                <Button onClick={handleSaveClick}>
+                    guardar
+                </Button>
+            </form>
+            <ul>
+                {usuarios.map((usuario, indice) => {
+                    return <li key={indice}>{usuario}</li>
+                })}
+            </ul>
+        </div>
     )
 }
 

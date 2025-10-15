@@ -13,7 +13,7 @@ https://tailwindcss.com/docs/display
 https://cssinjs.org/?v=v10.10.1
 https://danielkummer.github.io/git-flow-cheatsheet/
 https://lucide.dev/guide/installation
-
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
 
 rfc
 
@@ -146,3 +146,19 @@ Array.forEach((item,indice)=>{
 Array.map((item,indice)=>{
   return ????
 })
+
+
+
+- useState : para hacer variables reactivas; lo quiero para modificar la vista (estados)
+- useRef : para hacer variables no reactivas; lo quiero para guardar valores de formulario (referencias)
+- useEffect : para envolver operaciones asincronicas; lo quiero para envolver los fetch
+
+
+Tipos de componentes : 
+
+- Estructurales / Organizadores : Son componentes que siven para organizar a nivel general todo el resto de la applicacion (como App)
+- Reusables : Son los mas tipicos y sirven para reutilizarlos como plantillas, si quiero ver lo mismo en la pantalla
+- Container / Presentacional : Esto es un patron de diseño, me sirve para dejar desacoplado lo que es la logica de estados/efectos/pedidos de la parte visual (para mayor reusabilidad)
+
+
+Rutas : 
