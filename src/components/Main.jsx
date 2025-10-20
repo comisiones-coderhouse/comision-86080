@@ -1,16 +1,31 @@
-import ProductosContainer from "./ProductosContainer"
+import { Routes, Route } from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import ProductsPage from "./pages/ProductsPage"
+import ContactoPage from "./pages/ContactoPage"
+import DetalleProductoPage from "./pages/DetalleProductoPage"
 
 function Main() {
     return (
         <main className="main">
-            <h2>Soy Main</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, id maxime impedit repellendus similique, distinctio tempora ut dolor necessitatibus voluptatibus cum aperiam veritatis, quo porro quibusdam! Soluta repellat minus necessitatibus.</p>
             {/* <Counter /> */}
             {/* <Popup /> */}
             {/* <Form /> */}
             {/* <Form /> */}
             {/* <UserList /> */}
-            <ProductosContainer />
+            {/* <ProductosContainer /> */}
+            <Routes>
+                {/* <Route path="/productos" element={<SearchBar />} /> */}
+                {/* <Route path="/productos" element={<ProductosContainer />} /> */}
+                {/* <Route path="/productos" element={<ProductosContainer />} /> */}
+                
+                {/* /detalle-producto */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/productos" element={<ProductsPage />} />
+                
+                <Route path="/detalle-producto/:id" element={<DetalleProductoPage />} />
+                
+                <Route path="/contacto" element={<ContactoPage />} />
+            </Routes>
         </main>
     )
 }

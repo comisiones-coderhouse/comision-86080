@@ -18,6 +18,11 @@ a {
     text-decoration: none;
 }
 
+a.active {
+    color: $accent;
+    text-decoration: none;
+}
+
 
 #root {
     display: flex;
@@ -77,4 +82,8 @@ a {
 .popup__container {
     background-color: $background;
     padding: $p-base;
+}
+
+.search-input {
+    max-width: 400px;
 }

@@ -1,10 +1,17 @@
 import { Card } from 'antd';
+import { Link } from "react-router-dom";
+
 const { Meta } = Card;
-//Presentacional : Solo se encarga de la vista
+
 function ProductosCard({ producto }) {
     return (
         <Card
             hoverable
+            actions={[
+                <Link to={`/detalle-producto/${producto.id}`}>
+                    ver mas
+                </Link>
+            ]}
             cover={
                 <img
                     draggable={false}
