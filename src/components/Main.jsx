@@ -21,10 +21,10 @@ function Main() {
                 {/* /detalle-producto */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/productos" element={<ProductsPage />} />
+                <Route path="/contacto" element={<ContactoPage />} />
                 
                 <Route path="/detalle-producto/:id" element={<DetalleProductoPage />} />
                 
-                <Route path="/contacto" element={<ContactoPage />} />
             </Routes>
         </main>
     )

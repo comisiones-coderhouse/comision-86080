@@ -7,7 +7,7 @@ import './index.scss'
 const DOMElement = document.getElementById('root')
 
 const VirtualDOMElement = createRoot(DOMElement)
-
+ 
 VirtualDOMElement.render(
   <BrowserRouter>
     <App />

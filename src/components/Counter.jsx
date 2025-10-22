@@ -1,18 +1,23 @@
+import { Button } from "antd";
 import { useState } from "react";
 
-function Counter() {
+//Componente Hijo
+function Counter({ handleEjemplo }) {
+
 
     //Estados
     const stock = 3;
     const [contador, setContador] = useState(2)
-    const showError = contador > stock;
+    const showMinError = contador <= 0;
+    const showMaxError = contador > stock;
 
-    
+
     //Acciones
     function handleSumar() {
-        //contador = contador + 1;
-        setContador(contador + 1)
-        console.log(contador)
+        const nuevoContador = contador + 1;
+        
+        setContador(nuevoContador) //Los cambios de estado son asincronicos, entonces no tengo el calculo final una linea mas abajo
+        handleEjemplo(nuevoContador)
     }
 
     function handleRestar() {
@@ -23,20 +28,20 @@ function Counter() {
 
 
     //Vista
-    if (!showError) {
+    if (!showMaxError) {
         return (
             <div>
-                <button onClick={handleSumar} /* disabled={disabled} */>+</button>
+                <Button onClick={handleSumar} disabled={showMaxError}>+</Button>
                 <p>El contador va : {contador}</p>
-                <button onClick={handleRestar}>-</button>
+                <Button onClick={handleRestar} disabled={showMinError}>-</Button>
             </div>
         )
     } else {
         return (
             <div>
-                <button onClick={handleSumar} /* disabled={disabled} */>+</button>
+                <Button onClick={handleSumar} disabled={showMaxError}>+</Button>
                 <p>El contador va : {contador}</p>
-                <button onClick={handleRestar}>-</button>
+                <Button onClick={handleRestar} disabled={showMinError}>-</Button>
                 <p className="error-message">Te pasaste del stock disponible, solo hay {stock}!</p>
             </div>
         )

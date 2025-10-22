@@ -6,15 +6,8 @@ function Nav({ hasButtons }) {
     if (hasButtons === true) {
         return (
             <nav className="nav">
-                
-                {/* <a href="/">inicio</a> */}
                 <NavLink to="/">inicio</NavLink>
-
-                {/* <a href="/productos">productos</a> */}
                 <NavLink to="/productos">productos</NavLink>
-
-
-                {/* <a href="/contacto">contacto</a> */}
                 <NavLink to="/contacto">contacto</NavLink>
 
                 <Button color="cyan" variant="filled" icon={<ShoppingCart size={18} />} shape="circle" />

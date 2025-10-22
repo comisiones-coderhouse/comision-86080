@@ -162,3 +162,38 @@ Tipos de componentes :
 
 
 Rutas : 
+
+
+State Uplifting : "Es como lo opuesto a props"
+
+1) Necesito minimo tener dos componentes : uno padre y otro hijo
+2) Dentro del componente padre tengo que tener una funcion
+3) Hay que enviarle la funcion del punto 2 al componente hijo por props
+4) Hay que recibir la funcion como prop en el componente hijo
+5) Hay que mandar a llamar a la funcion en el componente hijo, idealmente en un evento
+
+
+
+
+Entrega 2 : 
+
+- Hay que entregar los componentes de la entrega 1 mas los nuevos solicitados : 
+
+  - App 
+    |_ NavBar
+    |  |_ CartWidget
+    |
+    |_ Routes
+      |_ Route ("/")
+        |_ ItemListContainer
+          |_ ItemList
+            |_ Item
+
+      |_ Route ("/category/:id")
+        |_ ItemListContainer
+          |_ ItemList
+            |_ Item
+
+      |_ Route ("/item/:id")
+        |_ ItemDetailContainer
+          |_ ItemDetail
