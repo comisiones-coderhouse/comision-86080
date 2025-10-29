@@ -1,7 +1,9 @@
+import PageTitle from "../PageTitle"
+
 function ContactoPage() {
     return (
         <>
-            <h2>Contacto</h2>
+            <PageTitle title="Contacto"/>
             <form>
                 <input type="text" />
             </form>

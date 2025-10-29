@@ -1,30 +1,17 @@
-import { Button } from "antd"
-import { ShoppingCart } from "lucide-react"
-import { Link , NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
 function Nav({ hasButtons }) {
-    if (hasButtons === true) {
-        return (
-            <nav className="nav">
-                <NavLink to="/">inicio</NavLink>
-                <NavLink to="/productos">productos</NavLink>
-                <NavLink to="/contacto">contacto</NavLink>
-
-                <Button color="cyan" variant="filled" icon={<ShoppingCart size={18} />} shape="circle" />
-                <Button color="cyan" variant="filled">
-                    Acceder
-                </Button>
-            </nav>
-        )
-    } else {
-        return (
-            <nav className="nav">
-                <Link to="/">inicio</Link>
-                <Link to="/productos">productos</Link>
-                <Link to="/contacto">contacto</Link>
-            </nav>
-        )
-    }
+    return (
+        <nav className="nav">
+            {hasButtons === false ? <Link to="/">inicio</Link> : null}
+            <NavLink to="/contacto">contacto</NavLink>
+            {hasButtons === false
+                ? <Link to="/carrito">mi carrito</Link>
+                : <CartWidget />
+            }
+        </nav>
+    )
 }
 
 

@@ -1,16 +1,30 @@
 import { Image, Rate, Flex, Button } from "antd"
 import Counter from "./Counter"
+import PageTitle from "./PageTitle"
+import { useProducts } from "../hooks/useProducts"
 
 //Componente Padre
 function DetalleProducto({ producto, formatedPrice }) {
 
-    function handleEjemplo (contador) {
-        console.log("Soy handle ejemplo")
-        console.log(contador)
+    const elValorDelContexto = useProducts()
+    let contadorActual = 0
+
+    function handleEjemplo(contador) {
+        contadorActual = contador
+    }
+
+    function handleAddToCart() {
+        elValorDelContexto.addProducts(contadorActual, producto)
     }
 
     return (
         <Flex gap="middle">
+            <Flex vertical gap="middle">
+                <PageTitle title={`${producto.title} - ${formatedPrice}`} />
+                <p>{producto.description}</p>
+                <Counter handleEjemplo={handleEjemplo} stock={producto.stock} />
+                <Button variant="solid" color="primary" onClick={handleAddToCart}>Agregar a carrito</Button>
+            </Flex>
             <Flex vertical align="center">
                 <Image
                     width={400}
@@ -20,12 +34,6 @@ function DetalleProducto({ producto, formatedPrice }) {
                     <Rate allowHalf defaultValue={producto.rating} disabled tooltips={['pesimo', 'bad', 'normal', 'piola', 'god']} />
                     <p>{producto.rating}</p>
                 </Flex>
-            </Flex>
-            <Flex vertical gap="middle">
-                <h2>{producto.title} - {formatedPrice}</h2>
-                <p>{producto.description}</p>
-                <Counter handleEjemplo={handleEjemplo}/>
-                <Button variant="solid" color="primary">Agregar a carrito</Button>
             </Flex>
         </Flex>
     )

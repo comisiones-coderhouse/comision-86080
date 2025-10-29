@@ -12,7 +12,6 @@ function ProductosContainer() {
         const respuesta = fetchProductosAsync()
         respuesta
             .then((respuesta) => {
-                console.log(respuesta)
                 setProductos(respuesta.products)
             })
             .catch((respuesta) => {
@@ -22,10 +21,7 @@ function ProductosContainer() {
     }, [])
 
     return (
-        <Row gutter={[16, 16]}>
-            {/* <Routes>
-                <Route path="/contacto" element={<p>Soy un parrafo</p>} />
-            </Routes> */}
+        <Row gutter={[16, 16]} className="productos-container">
             {productos.map((producto) => {
                 return (
                     <Col key={producto.id} xs={24} sm={12} md={8} lg={6} xl={4}>

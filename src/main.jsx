@@ -7,11 +7,11 @@ import './index.scss'
 const DOMElement = document.getElementById('root')
 
 const VirtualDOMElement = createRoot(DOMElement)
- 
+
 VirtualDOMElement.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
 )
-{/* <StrictMode> */ }
-/* </StrictMode>, */

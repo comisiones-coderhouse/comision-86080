@@ -197,3 +197,79 @@ Entrega 2 :
       |_ Route ("/item/:id")
         |_ ItemDetailContainer
           |_ ItemDetail
+
+
+
+
+
+
+if(condicion){
+  return "true"
+} esle {
+  return "false"
+}
+
+
+
+const resultado = codicion ?  "true" : "false"
+
+
+
+Context API : 
+
+- contexto : Es un lugar donde almacenar y compartir datos
+- Provider : Es un componente 
+- value 
+
+
+Implementar Contexto/Provider
+
+1) Crear un contexto usando la funcion createContext
+2) Sacar el Provider de adentro del contexto creado en el paso 1
+3) Crear un componente nuevo que retorne el Provider del paso 2
+4) Envolver el resto de la aplicacion en el componente del paso 3
+5) Configurar el valor del contexto a traves del Provider
+
+
+Usar/Consumir el valor del contexto
+
+1) Importar el hook "useContext" de react
+2) Importar el objeto contexto (el del paso 1)
+3) Hay que mandar a llamar al hook del paso 1 con el objeto del paso 2 como parametro
+4) Ya se puede usar el valor del contexto
+
+
+
+
+Pasar por valor (String - Number - Boolean - undefined - null)
+
+let nombre_1 = 'horacio';
+let nombre_2 = nombre_1;
+
+console.log(nombre_1)
+console.log(nombre_2)
+
+nombre_1 = "Juan"
+
+console.log(nombre_1)
+console.log(nombre_2)
+
+Pasar por referencia (Objeto)
+
+
+const persona_1 = { nombre : "Horacio" }
+const persona_2 = persona_1
+
+console.log(persona_1)
+console.log(persona_2)
+
+persona_1.nombre = "Juan"
+
+console.log(persona_1)
+console.log(persona_2)
+
+
+
+
+Operador REST / SPREAD (...)
+

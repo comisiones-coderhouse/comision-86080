@@ -1,12 +1,14 @@
-import { useParams } from "react-router-dom"
+import SearchBar from "../SearchBar"
+import ProductosContainer from "../ProductosContainer"
+import PageTitle from "../PageTitle"
 
-function HomePage(){
-
-    const params = useParams()
-    console.log("🚀 ~ HomePage ~ params:", params)
-
+function HomePage() {
     return (
-        <h2>Home</h2>
+        <>
+            <PageTitle title="Home"/>
+            <SearchBar />
+            <ProductosContainer />
+        </>
     )
 }
 

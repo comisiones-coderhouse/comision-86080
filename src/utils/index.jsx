@@ -32,7 +32,6 @@ export async function fetchUsersAsync() {
 
 }
 
-
 export async function fetchProductosAsync() {
 
     try {
@@ -49,8 +48,6 @@ export async function fetchProductosAsync() {
     console.log("Termino todo ")
 
 }
-
-
 
 export async function fetchProductoAsync(id) {
 

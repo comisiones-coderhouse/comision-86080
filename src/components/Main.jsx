@@ -7,24 +7,14 @@ import DetalleProductoPage from "./pages/DetalleProductoPage"
 function Main() {
     return (
         <main className="main">
-            {/* <Counter /> */}
-            {/* <Popup /> */}
-            {/* <Form /> */}
-            {/* <Form /> */}
-            {/* <UserList /> */}
-            {/* <ProductosContainer /> */}
             <Routes>
-                {/* <Route path="/productos" element={<SearchBar />} /> */}
-                {/* <Route path="/productos" element={<ProductosContainer />} /> */}
-                {/* <Route path="/productos" element={<ProductosContainer />} /> */}
-                
-                {/* /detalle-producto */}
+
                 <Route path="/" element={<HomePage />} />
-                <Route path="/productos" element={<ProductsPage />} />
+                {/* <Route path="/productos" element={<ProductsPage />} /> */}
                 <Route path="/contacto" element={<ContactoPage />} />
-                
+
                 <Route path="/detalle-producto/:id" element={<DetalleProductoPage />} />
-                
+
             </Routes>
         </main>
     )

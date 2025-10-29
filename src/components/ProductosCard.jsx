@@ -1,16 +1,26 @@
-import { Card } from 'antd';
+import { Button, Card } from 'antd';
+import { ShoppingCart } from 'lucide-react';
 import { Link } from "react-router-dom";
+import { useProducts } from '../hooks/useProducts';
 
 const { Meta } = Card;
 
 function ProductosCard({ producto }) {
+
+    const elValorDelContexto = useProducts()
+
+    function handleAddToCart() {
+        elValorDelContexto.addProducts(1, producto)
+    }
+
     return (
         <Card
             hoverable
             actions={[
                 <Link to={`/detalle-producto/${producto.id}`}>
                     ver mas
-                </Link>
+                </Link>,
+                <Button icon={<ShoppingCart />} onClick={handleAddToCart} />
             ]}
             cover={
                 <img

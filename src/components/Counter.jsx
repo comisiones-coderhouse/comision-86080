@@ -2,12 +2,12 @@ import { Button } from "antd";
 import { useState } from "react";
 
 //Componente Hijo
-function Counter({ handleEjemplo }) {
+function Counter({ handleEjemplo , stock }) {
 
 
     //Estados
-    const stock = 3;
-    const [contador, setContador] = useState(2)
+    //const stock = 3;
+    const [contador, setContador] = useState(1)
     const showMinError = contador <= 0;
     const showMaxError = contador > stock;
 
