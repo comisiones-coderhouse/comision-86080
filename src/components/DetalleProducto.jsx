@@ -3,7 +3,6 @@ import Counter from "./Counter"
 import PageTitle from "./PageTitle"
 import { useProducts } from "../hooks/useProducts"
 
-//Componente Padre
 function DetalleProducto({ producto, formatedPrice }) {
 
     const elValorDelContexto = useProducts()

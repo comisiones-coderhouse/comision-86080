@@ -1,7 +1,6 @@
 import { Button } from "antd";
 import { useParams, useNavigate } from "react-router-dom"
 import validator from 'validator';
-import SearchBar from "../SearchBar";
 import DetalleProductoContainer from "../DetalleProductoContainer";
 
 
@@ -18,8 +17,6 @@ function DetalleProductoPage() {
 
     return (
         <>
-            {/* <h2>{!valido ? "Detalle Producto : ID no valido" : `Detalle Producto : ${params.id}`}</h2> */}
-            {/* <SearchBar /> */}
             {!valido ? (
                 <Button onClick={handleNavigateClick}>
                     Volver a productos

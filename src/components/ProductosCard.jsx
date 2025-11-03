@@ -20,7 +20,7 @@ function ProductosCard({ producto }) {
                 <Link to={`/detalle-producto/${producto.id}`}>
                     ver mas
                 </Link>,
-                <Button icon={<ShoppingCart />} onClick={handleAddToCart} />
+                <Button icon={<ShoppingCart size={16}/>} onClick={handleAddToCart} shape='circle' type='primary'/>
             ]}
             cover={
                 <img

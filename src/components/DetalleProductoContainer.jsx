@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { fetchProductoAsync } from "../utils"
-import { Image, Rate } from 'antd';
 import DetalleProducto from "./DetalleProducto";
 
 function DetalleProductoContainer({ id }) {

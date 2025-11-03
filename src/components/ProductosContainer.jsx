@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import ProductosCard from "./ProductosCard"
 import { fetchProductosAsync } from "../utils"
 import { Col, Row } from 'antd';
-/* import { Route, Routes } from "react-router-dom" */
 
 function ProductosContainer() {
 

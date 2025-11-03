@@ -14,6 +14,8 @@ https://cssinjs.org/?v=v10.10.1
 https://danielkummer.github.io/git-flow-cheatsheet/
 https://lucide.dev/guide/installation
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
+https://firebase.google.com/docs/reference/js/firestore_.md?authuser=1#@firebase/firestore
+
 
 rfc
 
