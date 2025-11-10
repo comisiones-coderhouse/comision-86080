@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { fetchProductoAsync } from "../utils"
+import { fetchProductoAsync, getProductByID } from "../utils"
 import DetalleProducto from "./DetalleProducto";
 
 function DetalleProductoContainer({ id }) {
@@ -7,6 +7,9 @@ function DetalleProductoContainer({ id }) {
     const [producto, setProducto] = useState({})
 
     useEffect(() => {
+        
+        getProductByID()
+
         const respuesta = fetchProductoAsync(id)
         respuesta
             .then((respuesta) => {
