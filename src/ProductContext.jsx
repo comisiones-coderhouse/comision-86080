@@ -37,13 +37,17 @@ function ProductoProvider({ children }) {
 
     function removeProducts() { }
 
-    function resetProducts() { }
+    function resetCart() {
+        setCantProd(0)
+        setCarrito([])
+    }
 
     function updateProductUnits(id, units) { }
 
     const elValorDelContexto = {
         cant_productos: cantProd,
-        addProducts: addProducts
+        addProducts: addProducts,
+        resetCart: resetCart,
     }
 
     return (

@@ -6,6 +6,7 @@ import { useProducts } from '../hooks/useProducts';
 const { Meta } = Card;
 
 function ProductosCard({ producto }) {
+    
 
     const elValorDelContexto = useProducts()
 
@@ -17,7 +18,7 @@ function ProductosCard({ producto }) {
         <Card
             hoverable
             actions={[
-                <Link to={`/detalle-producto/${producto.id}`}>
+                <Link to={`/detalle-producto/${producto.firebaseID}`}>
                     ver mas
                 </Link>,
                 <Button icon={<ShoppingCart size={16}/>} onClick={handleAddToCart} shape='circle' type='primary'/>

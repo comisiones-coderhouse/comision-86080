@@ -4,6 +4,7 @@ import ContactoPage from "./pages/ContactoPage"
 import DetalleProductoPage from "./pages/DetalleProductoPage"
 import CategoryPage from "./pages/CategoryPage"
 import CartPage from "./pages/CartPage"
+import CheckoutPage from "./pages/CheckoutPage"
 
 function Main() {
     return (
@@ -19,6 +20,8 @@ function Main() {
                 <Route path="/category/:id" element={<CategoryPage />} />
 
                 <Route path="/cart" element={<CartPage />} />
+
+                <Route path="/checkout" element={<CheckoutPage />} />
 
             </Routes>
         </main>
