@@ -5,7 +5,7 @@ import PageTitle from "../PageTitle"
 function HomePage() {
     return (
         <>
-            <PageTitle title="Home"/>
+            <PageTitle title="Home" />
             <SearchBar />
             <ProductosContainer />
         </>

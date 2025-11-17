@@ -1,5 +1,5 @@
 import { db } from "./firebaseConfig"
-import { collection, getDocs, addDoc, getDoc, doc/* getDoc, deleteDoc, , updateDoc */, query, where } from "firebase/firestore"
+import { collection, getDocs, addDoc, getDoc, doc, query, where } from "firebase/firestore"
 
 
 export function fetchUsers() {
@@ -104,7 +104,7 @@ export async function getProductsByCategory(category = "furniture") {
 
         const productosCollection = collection(db, "productos")
 
-        const filtro = query(productosCollection, where("category", "==", category), where("price", ">", 0))
+        const filtro = query(productosCollection, where("category", "==", category), where("price", ">", 1500))
 
         const miConsulta = await getDocs(filtro)
 

@@ -8,6 +8,8 @@ function ProductosContainer() {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const items = loading == true ? Array.from({ length: 10 }) : productos
+
     useEffect(() => {
         const respuesta = fetchProductosAsync()
         respuesta
@@ -23,29 +25,23 @@ function ProductosContainer() {
 
     }, [])
 
-    if (loading == true) return (
-        <Row gutter={[16, 16]} className="productos-container">
-            {Array.from({ length: 10 }).map(() => {
-                return (
-                    <Col xs={24} sm={12} md={8} lg={6} xl={4}>
-                        <Card hoverable actions={[
-                            <Skeleton.Button/>,
-                            <Skeleton.Button/>
-                        ]}>
-                            <Skeleton />
-                        </Card>
-                    </Col>
-                )
-            })}
-        </Row>
-    )
 
     return (
         <Row gutter={[16, 16]} className="productos-container">
-            {productos.map((producto) => {
+            {items.map((item, index) => {
                 return (
-                    <Col key={producto.id} xs={24} sm={12} md={8} lg={6} xl={4}>
-                        <ProductosCard producto={producto} />
+                    <Col key={index} xs={24} sm={12} md={8} lg={6} xl={4}>
+                        {loading === true
+                            ? (
+                                <Card hoverable actions={[
+                                    <Skeleton.Button />,
+                                    <Skeleton.Button />
+                                ]}>
+                                    <Skeleton />
+                                </Card>
+                            ) : (
+                                <ProductosCard producto={item} />
+                            )}
                     </Col>
                 )
             })}

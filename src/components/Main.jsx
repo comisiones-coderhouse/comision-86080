@@ -10,19 +10,12 @@ function Main() {
     return (
         <main className="main">
             <Routes>
-
                 <Route path="/" element={<HomePage />} />
-
                 <Route path="/contacto" element={<ContactoPage />} />
-
                 <Route path="/detalle-producto/:id" element={<DetalleProductoPage />} />
-
                 <Route path="/category/:id" element={<CategoryPage />} />
-
                 <Route path="/cart" element={<CartPage />} />
-
                 <Route path="/checkout" element={<CheckoutPage />} />
-
             </Routes>
         </main>
     )

@@ -4,7 +4,7 @@ import DetalleProducto from "./DetalleProducto";
 import { Flex, Skeleton, } from "antd";
 
 function DetalleProductoContainer({ id }) {
-
+    
     const [producto, setProducto] = useState({})
     const [loading, setLoading] = useState(true)
 

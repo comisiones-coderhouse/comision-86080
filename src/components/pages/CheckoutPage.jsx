@@ -9,18 +9,14 @@ import { useProducts } from "../../hooks/useProducts";
 function CheckoutPage() {
 
     const [id, setId] = useState(null)
-    const nameRef = useRef() //{ current : null }
-    const phoneRef = useRef() //{ current : null }
-    const emailRef = useRef() //{ current : null }
+    const nameRef = useRef()
+    const phoneRef = useRef()
+    const emailRef = useRef()
     const elValorDelContexto = useProducts()
 
     function handleConfirmarCompra(evt) {
         evt.preventDefault()
-        console.log("confirmar compra")
-        //console.log(nameRef) //{ current : {...} }
-        //console.log(nameRef.current) // {..., input : , ....}
-        //console.log(nameRef.current.input) // <input type="text" />
-        //console.log(nameRef.current.input.value) // "Horacio"
+
         const nombre = nameRef.current.input.value
         const telefono = phoneRef.current.input.value
         const email = emailRef.current.input.value
@@ -31,16 +27,11 @@ function CheckoutPage() {
                 telefono: telefono,
                 email: email
             },
-            /* fecha: new Date(), */
             fecha: serverTimestamp(),
             productos: [],
             total: 1000,
         }
 
-        //1) guardo en DB
-        //2) limpio el formulario
-        //3) limpio el carrito
-        //4) muestro confirmacion
         saveSale(venta)
             .then((id) => {
 
@@ -57,7 +48,6 @@ function CheckoutPage() {
             .catch((error) => {
                 console.log(error)
             })
-        console.log(venta)
     }
 
     return (
@@ -72,7 +62,7 @@ function CheckoutPage() {
                             <Input placeholder="Telefono" prefix={<PhoneIcon color="rgba(0,0,0,0.2)" size={16} />} ref={phoneRef} />
                             <Input placeholder="Email" prefix={<MailIcon color="rgba(0,0,0,0.2)" size={16} />} ref={emailRef} />
                         </Flex>
-                        <Button type="primary" /* onClick={handleConfirmarCompra} */ htmlType="submit">Confirmar compra</Button>
+                        <Button type="primary" htmlType="submit">Confirmar compra</Button>
                     </form>
                 )}
         </>
