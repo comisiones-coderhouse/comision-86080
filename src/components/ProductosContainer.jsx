@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import ProductosCard from "./ProductosCard"
 import { fetchProductosAsync } from "../utils"
 import { Card, Col, Row, Skeleton } from 'antd';
+import toast from "react-hot-toast";
 
 function ProductosContainer() {
 
@@ -11,18 +12,18 @@ function ProductosContainer() {
     const items = loading == true ? Array.from({ length: 10 }) : productos
 
     useEffect(() => {
-        const respuesta = fetchProductosAsync()
-        respuesta
-            .then((respuesta) => {
+        toast.promise(fetchProductosAsync, {
+            loading: "Cargando productos...",
+            success: (respuesta) => {
                 setProductos(respuesta.products)
-            })
-            .catch((respuesta) => {
-                console.log(respuesta)
-            })
-            .finally(() => {
                 setLoading(false)
-            })
-
+                return "Productos cargados exitosamente!"
+            },
+            error: () => {
+                setLoading(false)
+                return "Hubo un error al cargar los productos"
+            },
+        })
     }, [])
 
 

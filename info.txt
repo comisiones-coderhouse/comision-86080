@@ -15,7 +15,8 @@ https://danielkummer.github.io/git-flow-cheatsheet/
 https://lucide.dev/guide/installation
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
 https://firebase.google.com/docs/reference/js/firestore_.md?authuser=1#@firebase/firestore
-
+https://jsdoc.app/
+https://react-hot-toast.com/
 
 rfc
 
@@ -275,3 +276,42 @@ console.log(persona_2)
 
 Operador REST / SPREAD (...)
 
+
+
+Variables de entorno : 
+
+
+
+
+Para el final : 
+
+- Dejar el codigo sin comentarios
+- Dejar el codigo sin console.logs* 
+- Dejar el codigo sin fragmentos innecesarios
+- Dejar el codigo sin variables sin utilizar
+- Sigan sus propias convenciones (esto es opcional)
+
+* Los unicos console.logs que se podrian admitir son los de errores, catchs 
+
+
+  - App 
+    |_ NavBar
+    |  |_ CartWidget
+    |
+    |_ Routes
+      |_ Route ("/")
+        |_ ItemListContainer
+          |_ ItemList
+            |_ Item
+
+      |_ Route ("/category/:id")
+        |_ ItemListContainer
+          |_ ItemList
+            |_ Item
+
+      |_ Route ("/item/:id")
+        |_ ItemDetailContainer
+          |_ ItemDetail
+
+      |_ Route ("/cart")
+        |_ Cart

@@ -6,7 +6,7 @@ import { useProducts } from '../hooks/useProducts';
 const { Meta } = Card;
 
 function ProductosCard({ producto }) {
-    
+
 
     const elValorDelContexto = useProducts()
 
@@ -21,7 +21,7 @@ function ProductosCard({ producto }) {
                 <Link to={`/detalle-producto/${producto.firebaseID}`}>
                     ver mas
                 </Link>,
-                <Button icon={<ShoppingCart size={16}/>} onClick={handleAddToCart} shape='circle' type='primary'/>
+                <Button icon={<ShoppingCart size={16} />} onClick={handleAddToCart} shape='circle' type='primary' />
             ]}
             cover={
                 <img
