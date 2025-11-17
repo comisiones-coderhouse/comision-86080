@@ -293,7 +293,7 @@ Para el final :
 
 * Los unicos console.logs que se podrian admitir son los de errores, catchs 
 
-
+  - CartProvider
   - App 
     |_ NavBar
     |  |_ CartWidget
